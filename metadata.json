@@ -1,0 +1,8 @@
+{
+  "name": "versão em preto",
+  "description": "An educational technology platform helping schools create, deliver, grade, and analyze assessments using safe, GDPR-compliant AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

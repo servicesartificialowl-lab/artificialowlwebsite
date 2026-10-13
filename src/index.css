@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Chamberi Display';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Chamberi Display'), local('Chamberi-Display'), local('ChamberiDisplay');
+}
+
+@font-face {
+  font-family: 'Chamberi Display';
+  font-weight: 500;
+  font-style: normal;
+  src: local('Chamberi Display Medium'), local('Chamberi-Display-Medium'), local('ChamberiDisplay-Medium');
+}
+
+@font-face {
+  font-family: 'Chamberi Display';
+  font-weight: 600;
+  font-style: normal;
+  src: local('Chamberi Display Semibold'), local('Chamberi-Display-Semibold'), local('ChamberiDisplay-Semibold');
+}
+
+@font-face {
+  font-family: 'Chamberi Display';
+  font-weight: 700;
+  font-style: normal;
+  src: local('Chamberi Display Bold'), local('Chamberi-Display-Bold'), local('ChamberiDisplay-Bold');
+}
+
+@theme {
+  --font-sans: "Chamberi Display", Georgia, "Times New Roman", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+html,
+body,
+button,
+input,
+textarea,
+select,
+a,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+label,
+nav,
+section,
+footer,
+.card,
+.button,
+.badge,
+.hero,
+.mockup {
+  font-family: "Chamberi Display", Georgia, "Times New Roman", serif !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #0f172a;
+  overflow-x: hidden;
+}
+
+/* Custom styles for professional, very subtle gradient backgrounds */
+.glow-indigo {
+  filter: blur(140px);
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.06) 0%, rgba(99, 102, 241, 0.02) 60%, rgba(0, 0, 0, 0) 100%);
+  opacity: 0.5;
+}
+
+.glow-teal {
+  filter: blur(120px);
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.04) 0%, rgba(20, 184, 166, 0.01) 60%, rgba(0, 0, 0, 0) 100%);
+  opacity: 0.4;
+}
+
