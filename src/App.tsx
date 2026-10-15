@@ -14,6 +14,8 @@ import PricingSection from './components/PricingSection';
 import FinalCTA from './components/FinalCTA';
 import DemoModal from './components/DemoModal';
 import { LanguageProvider } from './context/LanguageContext';
+import CookieBanner from './components/CookieBanner';
+import { CookieConsentProvider } from './context/CookieConsentContext';
 
 export default function App() {
   const [isDemoOpen, setIsDemoOpen] = useState(false);
@@ -27,6 +29,7 @@ export default function App() {
   };
 
   return (
+  <CookieConsentProvider>
     <LanguageProvider>
       <div className="min-h-screen bg-slate-50 selection:bg-indigo-500 selection:text-white">
         {/* Navigation bar with callback to trigger the Demo booking modal */}
@@ -72,9 +75,16 @@ export default function App() {
         </main>
 
         {/* Interactive Booking Scheduler Modal */}
-        <DemoModal isOpen={isDemoOpen} onClose={handleCloseDemo} />
+        <DemoModal
+          isOpen={isDemoOpen}
+          onClose={handleCloseDemo}
+        />
+
+        {/* Cookie consent banner */}
+        <CookieBanner />
       </div>
     </LanguageProvider>
-  );
+  </CookieConsentProvider>
+);
 }
 

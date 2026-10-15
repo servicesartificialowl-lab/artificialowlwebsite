@@ -120,7 +120,7 @@ export default function Navbar({ onBookDemo }: NavbarProps) {
 
             {/* Login Button "Entrar" */}
             <a
-              href="https://www.artificialowl-app.com/"
+              href="https://teach-app.pt/"
               target="_blank"
               rel="noopener noreferrer"
               className={`text-[14px] font-semibold transition-all cursor-pointer font-sans px-2 py-1 ${
@@ -203,7 +203,7 @@ export default function Navbar({ onBookDemo }: NavbarProps) {
             ))}
             <div className="pt-4 border-t border-slate-100 space-y-3">
               <a
-                href="https://www.artificialowl-app.com/"
+                href="https://teach-app.pt/"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMobileMenuOpen(false)}
