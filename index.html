@@ -3,7 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
+    <title>Artificial Owl | AI tools for teachers</title>
+    <meta
+  name="description"
+  content="Artificial Owl helps teachers create, grade and analyse assessments faster with AI-powered tools."
+/>
+
+    <!-- Google Analytics 4 with Consent Mode v2.
+         Everything is denied by default; CookieConsentContext updates
+         consent once the visitor makes a choice in the cookie banner. -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        functionality_storage: 'denied',
+        personalization_storage: 'denied',
+        security_storage: 'granted',
+        wait_for_update: 500
+      });
+      try {
+        var saved = JSON.parse(localStorage.getItem('artificialOwlCookiePreferences') || 'null');
+        if (saved) {
+          gtag('consent', 'update', {
+            analytics_storage: saved.analytics ? 'granted' : 'denied',
+            functionality_storage: saved.functional ? 'granted' : 'denied',
+            personalization_storage: saved.functional ? 'granted' : 'denied',
+            ad_storage: saved.marketing ? 'granted' : 'denied',
+            ad_user_data: saved.marketing ? 'granted' : 'denied',
+            ad_personalization: saved.marketing ? 'granted' : 'denied'
+          });
+        }
+      } catch (e) {}
+      gtag('js', new Date());
+      gtag('config', 'G-E2C1KFH5G1');
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E2C1KFH5G1"></script>
   </head>
   <body>
     <div id="root"></div>

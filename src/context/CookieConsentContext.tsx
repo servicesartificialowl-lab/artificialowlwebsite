@@ -28,6 +28,26 @@ const defaultPreferences: CookiePreferences = {
   marketing: false,
 };
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+// Tells Google tags (GA4, and later GTM/Ads) what the visitor consented to.
+function updateGoogleConsent(preferences: CookiePreferences) {
+  const state = (allowed: boolean) => (allowed ? 'granted' : 'denied');
+
+  window.gtag?.('consent', 'update', {
+    analytics_storage: state(preferences.analytics),
+    functionality_storage: state(preferences.functional),
+    personalization_storage: state(preferences.functional),
+    ad_storage: state(preferences.marketing),
+    ad_user_data: state(preferences.marketing),
+    ad_personalization: state(preferences.marketing),
+  });
+}
+
 const CookieConsentContext =
   createContext<CookieConsentContextType | undefined>(undefined);
 
@@ -55,6 +75,7 @@ export function CookieConsentProvider({
   const savePreferences = (newPreferences: CookiePreferences) => {
     setPreferences(newPreferences);
     setHasChosen(true);
+    updateGoogleConsent(newPreferences);
 
     localStorage.setItem(
       'artificialOwlCookiePreferences',
