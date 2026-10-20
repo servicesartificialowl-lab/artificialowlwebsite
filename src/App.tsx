@@ -7,6 +7,7 @@ import SolutionSection from './components/SolutionSection';
 import ComparisonSection from './components/ComparisonSection';
 import FeaturesSection from './components/FeaturesSection';
 import TeacherBenefit from './components/TeacherBenefit';
+import NewsSection from './components/NewsSection';
 import RoadmapSection from './components/RoadmapSection';
 import WhyNowSection from './components/WhyNowSection';
 import TestimonialsSection from './components/TestimonialsSection';
@@ -60,6 +61,9 @@ export default function App() {
 
           {/* 7. Testimonials Section */}
           <TestimonialsSection />
+
+          {/* News Section */}
+          <NewsSection />
 
           {/* 8. Roadmap Section */}
           <RoadmapSection />

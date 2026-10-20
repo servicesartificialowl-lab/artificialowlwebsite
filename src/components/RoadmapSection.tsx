@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { PenTool, MessageSquarePlus, Cpu, Zap, Sparkles } from 'lucide-react';
+import { MessageSquarePlus, Cpu, Zap, Sparkles } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../lib/translations';
 
@@ -8,11 +8,9 @@ export default function RoadmapSection() {
   const { language } = useLanguage();
   const t = translations[language].roadmap;
 
-  const getIcon = (idx: number) => {
-    switch (idx) {
-      case 0:
-        return <PenTool className="h-6 w-6 text-indigo-600" />;
-      case 1:
+  const getIcon = (id: string) => {
+    switch (id) {
+      case 'r-2':
         return <MessageSquarePlus className="h-6 w-6 text-teal-600" />;
       default:
         return <Cpu className="h-6 w-6 text-indigo-600" />;
@@ -41,7 +39,7 @@ export default function RoadmapSection() {
         </div>
 
         {/* Roadmap Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {t.items.map((item, idx) => (
             <motion.div
               key={item.id}
@@ -54,7 +52,7 @@ export default function RoadmapSection() {
               {/* Outer decorative halo for active items */}
               <div className="absolute top-0 right-0 p-3">
                 <span className={`text-[9px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider ${
-                  idx === 1 
+                  item.id === 'r-2'
                     ? 'bg-teal-50 text-teal-600 border border-teal-100'
                     : 'bg-indigo-50 text-indigo-600 border border-indigo-100'
                 }`}>
@@ -65,7 +63,7 @@ export default function RoadmapSection() {
               <div className="space-y-4">
                 {/* Icon Container */}
                 <div className="p-3 bg-white rounded-2xl border border-slate-100 group-hover:bg-indigo-50 transition-all shadow-sm w-fit">
-                  {getIcon(idx)}
+                  {getIcon(item.id)}
                 </div>
 
                 <div className="space-y-2">
