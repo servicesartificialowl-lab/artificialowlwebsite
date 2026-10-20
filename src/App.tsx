@@ -9,6 +9,7 @@ import FeaturesSection from './components/FeaturesSection';
 import TeacherBenefit from './components/TeacherBenefit';
 import RoadmapSection from './components/RoadmapSection';
 import WhyNowSection from './components/WhyNowSection';
+import TeamSection from './components/TeamSection';
 import TestimonialsSection from './components/TestimonialsSection';
 import PricingSection from './components/PricingSection';
 import FinalCTA from './components/FinalCTA';
@@ -66,6 +67,9 @@ export default function App() {
 
           {/* 9. Why Now Section */}
           <WhyNowSection />
+
+          {/* Team Section */}
+          <TeamSection />
 
           {/* Pricing Section */}
           <PricingSection onBookDemo={handleOpenDemo} />

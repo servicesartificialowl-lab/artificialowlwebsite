@@ -543,6 +543,10 @@ export const translations = {
         ],
         cta: 'Contact Us'
       }
+    },
+    team: {
+      title: 'Meet our team',
+      subtitle: 'The people behind Artificial Owl.'
     }
   },
   pt: {
@@ -1087,6 +1091,10 @@ export const translations = {
         ],
         cta: 'Contactar'
       }
+    },
+    team: {
+      title: 'Conheça a nossa equipa',
+      subtitle: 'As pessoas por trás da Artificial Owl.'
     }
   }
 };
