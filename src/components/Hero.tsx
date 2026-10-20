@@ -6,13 +6,6 @@ import {
   ArrowRight,
   Play
 } from 'lucide-react';
-import {
-  OverloadIllustration,
-  StepsInIllustration,
-  QualityTimeIllustration,
-  RicherFeedbackIllustration,
-  FocusTeachingIllustration
-} from './CarouselIllustrations';
 
 interface HeroProps {
   onBookDemo: () => void;
@@ -20,8 +13,7 @@ interface HeroProps {
 
 const carouselSlides = [
   {
-    src: '/assets/input_file_0.png',
-    illustration: <OverloadIllustration />,
+    src: 'https://i.postimg.cc/k470ktt1/teacher-overloaded-png.png',
     title: {
       pt: '1. Sobrecarga docente',
       en: '1. Teacher Overload'
@@ -32,8 +24,7 @@ const carouselSlides = [
     }
   },
   {
-    src: '/assets/input_file_1.png',
-    illustration: <StepsInIllustration />,
+    src: 'https://i.postimg.cc/SRMH9707/Chat-GPT-Image-5-07-2026-16-16-23-(2).png',
     title: {
       pt: '2. Artificial Owl entra em ação',
       en: '2. Artificial Owl Steps In'
@@ -44,8 +35,7 @@ const carouselSlides = [
     }
   },
   {
-    src: '/assets/input_file_2.png',
-    illustration: <QualityTimeIllustration />,
+    src: 'https://i.postimg.cc/vB602Y0z/Chat-GPT-Image-5-07-2026-16-19-55-(2).png',
     title: {
       pt: '3. Tempo de qualidade devolvido',
       en: '3. Quality Time Returned'
@@ -56,8 +46,7 @@ const carouselSlides = [
     }
   },
   {
-    src: '/assets/input_file_3.png',
-    illustration: <RicherFeedbackIllustration />,
+    src: 'https://i.postimg.cc/mDMSNdrJ/Chat-GPT-Image-5-07-2026-16-37-52-(1).png',
     title: {
       pt: '4. Feedback mais rico',
       en: '4. Richer Feedback'
@@ -68,8 +57,7 @@ const carouselSlides = [
     }
   },
   {
-    src: '/assets/input_file_4.png',
-    illustration: <FocusTeachingIllustration />,
+    src: 'https://i.postimg.cc/CLKqwPgb/Chat-GPT-Image-5-07-2026-17-06-44-(1).png',
     title: {
       pt: '5. Foco em ensinar',
       en: '5. Focus on Teaching'
@@ -199,16 +187,12 @@ export default function Hero({ onBookDemo }: HeroProps) {
                     transition={{ duration: 0.5 }}
                     className="absolute inset-0 w-full h-full"
                   >
-                    {carouselSlides[activeSlide].illustration ? (
-                      carouselSlides[activeSlide].illustration
-                    ) : (
-                      <img
+                    <img
                         src={carouselSlides[activeSlide].src}
                         alt={isPt ? carouselSlides[activeSlide].title.pt : carouselSlides[activeSlide].title.en}
                         referrerPolicy="no-referrer"
                         className="w-full h-full object-cover block"
                       />
-                    )}
                     
                     {/* Caption overlay */}
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-950/95 via-slate-950/70 to-transparent p-5 sm:p-6 pt-12 text-left">
