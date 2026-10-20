@@ -39,15 +39,6 @@ export default function TeamSection() {
       objectPosition: 'center 15%'
     },
     {
-      id: 'afonso-fernandes',
-      name: 'Afonso Fernandes',
-      role: isPt ? 'Estagiário' : 'Intern',
-      institution: 'Artificial Owl',
-      imageUrl: 'https://i.postimg.cc/9MpCb8fw/1771638213882.jpg',
-      linkedinUrl: 'https://www.linkedin.com/in/afonso-fernandes-11480a399/',
-      objectPosition: 'center 12%'
-    },
-    {
       id: 'rute-xavier',
       name: 'Rute Xavier',
       role: 'Advisor',
