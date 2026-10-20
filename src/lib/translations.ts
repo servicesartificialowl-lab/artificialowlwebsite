@@ -527,7 +527,7 @@ export const translations = {
           'Centralized assessment management',
           'Useful pedagogical data'
         ],
-        cta: 'Book a Demo'
+        cta: 'Buy now'
       },
       enterprise: {
         title: 'Enterprise Plan',
@@ -541,7 +541,7 @@ export const translations = {
           'Dedicated support',
           'Tailored terms for your institution'
         ],
-        cta: 'Contact Us'
+        cta: 'Buy now'
       }
     }
   },
@@ -1071,7 +1071,7 @@ export const translations = {
           'Gestão centralizada de avaliações',
           'Dados pedagógicos úteis'
         ],
-        cta: 'Contacte-nos'
+        cta: 'Comprar'
       },
       enterprise: {
         title: 'Plano Enterprise',
@@ -1085,7 +1085,7 @@ export const translations = {
           'Suporte dedicado',
           'Condições ajustadas à instituição'
         ],
-        cta: 'Contactar'
+        cta: 'Comprar'
       }
     }
   }

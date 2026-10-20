@@ -68,7 +68,7 @@ export default function App() {
           <WhyNowSection />
 
           {/* Pricing Section */}
-          <PricingSection onBookDemo={handleOpenDemo} />
+          <PricingSection />
 
           {/* 10. Final CTA & Footer Section */}
           <FinalCTA onBookDemo={handleOpenDemo} />

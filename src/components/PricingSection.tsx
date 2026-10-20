@@ -4,11 +4,9 @@ import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../lib/translations';
 import { Check, Sparkles, Building2 } from 'lucide-react';
 
-interface PricingSectionProps {
-  onBookDemo: () => void;
-}
+const TEACH_URL = 'https://teach-app.pt/';
 
-export default function PricingSection({ onBookDemo }: PricingSectionProps) {
+export default function PricingSection() {
   const { language } = useLanguage();
   const t = translations[language].pricing;
 
@@ -103,12 +101,14 @@ export default function PricingSection({ onBookDemo }: PricingSectionProps) {
             </div>
 
             {/* Action CTA Button */}
-            <button
-              onClick={onBookDemo}
-              className="w-full py-3.5 px-6 rounded-xl bg-[#4F46E5] hover:bg-[#5a52ff] active:scale-[0.98] transition-all font-semibold text-sm text-white shadow-[0_4px_14px_rgba(79,70,229,0.3)] hover:shadow-[0_6px_20px_rgba(79,70,229,0.4)] text-center cursor-pointer"
+            <a
+              href={TEACH_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full py-3.5 px-6 rounded-xl bg-[#4F46E5] hover:bg-[#5a52ff] active:scale-[0.98] transition-all font-semibold text-sm text-white shadow-[0_4px_14px_rgba(79,70,229,0.3)] hover:shadow-[0_6px_20px_rgba(79,70,229,0.4)] text-center cursor-pointer"
             >
               {t.standard.cta}
-            </button>
+            </a>
           </motion.div>
 
           {/* CARD 2 — Enterprise Plan */}
@@ -162,12 +162,14 @@ export default function PricingSection({ onBookDemo }: PricingSectionProps) {
             </div>
 
             {/* Action CTA Button */}
-            <button
-              onClick={onBookDemo}
-              className="w-full py-3.5 px-6 rounded-xl bg-slate-900 hover:bg-slate-800 active:scale-[0.98] transition-all font-semibold text-sm text-white shadow-sm text-center cursor-pointer"
+            <a
+              href={TEACH_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full py-3.5 px-6 rounded-xl bg-slate-900 hover:bg-slate-800 active:scale-[0.98] transition-all font-semibold text-sm text-white shadow-sm text-center cursor-pointer"
             >
               {t.enterprise.cta}
-            </button>
+            </a>
           </motion.div>
 
         </div>
