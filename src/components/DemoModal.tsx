@@ -43,10 +43,10 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
 
             {/* Iframe Content Container */}
             <div className="pt-14 pb-5 px-4 flex-1 flex flex-col min-h-0 overflow-hidden">
-              <div className="w-full flex-1 min-h-[400px] h-[65vh] md:h-[72vh] rounded-2xl overflow-hidden bg-slate-50 border border-slate-100">
+              <div className="relative w-full flex-1 min-h-[400px] h-[65vh] md:h-[72vh] rounded-2xl overflow-hidden bg-slate-50 border border-slate-100">
                 <iframe
                   src="https://docs.google.com/forms/d/e/1FAIpQLSf_txWa7-cLpmcei23AqAe0xdnzDBXEpXRruNRVxSl_6Le4eA/viewform?embedded=true"
-                  className="w-full h-full"
+                  className="absolute inset-0 w-full h-full"
                   frameBorder="0"
                   marginHeight={0}
                   marginWidth={0}
