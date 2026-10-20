@@ -384,18 +384,25 @@ export const translations = {
         }
       ]
     },
+    news: {
+      badge: 'Just launched',
+      title: "What's new",
+      description: 'The latest features now available on the platform.',
+      items: [
+        {
+          id: 'n-1',
+          title: 'Handwritten answer grading',
+          description: 'Scan and grade handwritten paper exam sheets with advanced OCR.',
+          tag: 'New'
+        }
+      ]
+    },
     roadmap: {
       badge: 'Vision & Innovation',
       title: 'Coming soon',
       description: 'We are continuously building new features to solve assessment bottlenecks.',
       footer: 'Next-Gen Module Deployment',
       items: [
-        {
-          id: 'r-1',
-          title: 'Handwritten answer grading',
-          description: 'Scan and grade handwritten paper exam sheets with advanced OCR.',
-          quarter: 'R&D Phase'
-        },
         {
           id: 'r-2',
           title: 'Criteria creation agent',
@@ -928,18 +935,25 @@ export const translations = {
         }
       ]
     },
+    news: {
+      badge: 'Acabado de lançar',
+      title: 'Novidades',
+      description: 'As funcionalidades mais recentes, já disponíveis na plataforma.',
+      items: [
+        {
+          id: 'n-1',
+          title: 'Correção de exames manuscritos',
+          description: 'Digitalize e corrija folhas de testes escritas à mão com OCR avançado.',
+          tag: 'Novo'
+        }
+      ]
+    },
     roadmap: {
       badge: 'Visão e Inovação',
       title: 'Brevemente',
       description: 'Estamos continuamente a desenvolver novas ferramentas para otimizar a avaliação.',
       footer: 'Módulo de Nova Geração',
       items: [
-        {
-          id: 'r-1',
-          title: 'Correção de exames manuscritos',
-          description: 'Digitalize e corrija folhas de testes escritas à mão com OCR avançado.',
-          quarter: 'Fase I&D'
-        },
         {
           id: 'r-2',
           title: 'Assistente de critérios de cotação',
