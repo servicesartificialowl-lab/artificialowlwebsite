@@ -12,6 +12,7 @@ interface TeamMember {
   imageUrl: string;
   linkedinUrl?: string;
   objectPosition?: string;
+  row: 'founders' | 'advisors' | 'interns';
 }
 
 export default function TeamSection() {
@@ -22,6 +23,7 @@ export default function TeamSection() {
   const members: TeamMember[] = [
     {
       id: 'joao-simao',
+      row: 'founders',
       name: 'João Simão',
       role: 'CTO',
       institution: 'Artificial Owl',
@@ -31,6 +33,7 @@ export default function TeamSection() {
     },
     {
       id: 'joao-batalha-mendonca',
+      row: 'founders',
       name: 'João Batalha Mendonça',
       role: 'CEO',
       institution: 'Artificial Owl',
@@ -40,6 +43,7 @@ export default function TeamSection() {
     },
     {
       id: 'elisa-avelas',
+      row: 'interns',
       name: 'Elisa Avelas',
       role: 'Marketing Intern',
       institution: 'Artificial Owl',
@@ -48,6 +52,7 @@ export default function TeamSection() {
     },
     {
       id: 'andreia-vitorino',
+      row: 'interns',
       name: 'Andreia Vitorino',
       role: 'Marketing Intern',
       institution: 'Artificial Owl',
@@ -56,6 +61,7 @@ export default function TeamSection() {
     },
     {
       id: 'gilberta-rufino',
+      row: 'interns',
       name: 'Gilberta Rufino',
       role: 'Marketing Intern',
       institution: 'Artificial Owl',
@@ -64,6 +70,7 @@ export default function TeamSection() {
     },
     {
       id: 'rute-xavier',
+      row: 'advisors',
       name: 'Rute Xavier',
       role: 'Advisor',
       institution: isPt
@@ -75,6 +82,7 @@ export default function TeamSection() {
     },
     {
       id: 'rodrigo-queiroz-melo',
+      row: 'advisors',
       name: 'Rodrigo Queiroz e Melo',
       role: 'Advisor',
       institution: 'Artificial Owl / Universidade Católica Portuguesa',
@@ -84,6 +92,7 @@ export default function TeamSection() {
     },
     {
       id: 'monica-zickermann',
+      row: 'advisors',
       name: 'Mónica Zickermann',
       role: 'Advisor',
       institution: isPt ? 'Colégio Alemão do Porto' : 'German School of Porto',
@@ -136,58 +145,62 @@ export default function TeamSection() {
           </motion.p>
         </div>
 
-        {/* Team Grid */}
-        <div className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto" id="team-grid">
-          {members.map((member, idx) => (
-            <motion.a
-              key={member.id}
-              href={member.linkedinUrl}
-              target={member.linkedinUrl ? '_blank' : undefined}
-              rel={member.linkedinUrl ? 'noopener noreferrer' : undefined}
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className={`group bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_30px_-6px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col w-full sm:w-[280px] md:w-[260px] lg:w-[260px] xl:w-[270px] shrink-0 block ${member.linkedinUrl ? 'cursor-pointer' : ''}`}
-              id={member.id}
-            >
-              <div className="relative h-[310px] w-full overflow-hidden shrink-0 bg-slate-100">
-                <img
-                  src={member.imageUrl}
-                  alt={member.name}
-                  referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500 ease-out"
-                  style={{ objectPosition: member.objectPosition || 'center 20%' }}
-                />
-              </div>
-
-              <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
-                <div className="space-y-1">
-                  <div className="flex items-start justify-between gap-3">
-                    <h3 className="font-bold text-slate-900 text-lg group-hover:text-indigo-600 transition-colors duration-200 leading-tight">
-                      {member.name}
-                    </h3>
-                    {member.linkedinUrl && (
-                      <div
-                        className="text-slate-400 group-hover:text-[#0077b5] transition-colors mt-0.5"
-                        aria-label={`${member.name} LinkedIn Profile`}
-                      >
-                        <Linkedin className="h-4.5 w-4.5" />
-                      </div>
-                    )}
-                  </div>
-                  <p className="text-xs font-bold text-teal-600 tracking-wider uppercase">
-                    {member.role}
-                  </p>
-                </div>
-                <p
-                  className="text-xs text-slate-500 leading-relaxed line-clamp-2 min-h-[2rem] pt-3.5 border-t border-slate-100"
-                  title={member.institution}
+        {/* Team Grid: founders, then advisors, then interns, each on its own row */}
+        <div className="space-y-8 max-w-6xl mx-auto" id="team-grid">
+          {(['founders', 'advisors', 'interns'] as const).map(row => (
+            <div key={row} className="flex flex-wrap justify-center gap-8">
+              {members.filter(member => member.row === row).map((member, idx) => (
+                <motion.a
+                  key={member.id}
+                  href={member.linkedinUrl}
+                  target={member.linkedinUrl ? '_blank' : undefined}
+                  rel={member.linkedinUrl ? 'noopener noreferrer' : undefined}
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  className={`group bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_30px_-6px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col w-full sm:w-[280px] md:w-[260px] lg:w-[260px] xl:w-[270px] shrink-0 block ${member.linkedinUrl ? 'cursor-pointer' : ''}`}
+                  id={member.id}
                 >
-                  {member.institution}
-                </p>
-              </div>
-            </motion.a>
+                  <div className="relative h-[310px] w-full overflow-hidden shrink-0 bg-slate-100">
+                    <img
+                      src={member.imageUrl}
+                      alt={member.name}
+                      referrerPolicy="no-referrer"
+                      className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500 ease-out"
+                      style={{ objectPosition: member.objectPosition || 'center 20%' }}
+                    />
+                  </div>
+
+                  <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
+                    <div className="space-y-1">
+                      <div className="flex items-start justify-between gap-3">
+                        <h3 className="font-bold text-slate-900 text-lg group-hover:text-indigo-600 transition-colors duration-200 leading-tight">
+                          {member.name}
+                        </h3>
+                        {member.linkedinUrl && (
+                          <div
+                            className="text-slate-400 group-hover:text-[#0077b5] transition-colors mt-0.5"
+                            aria-label={`${member.name} LinkedIn Profile`}
+                          >
+                            <Linkedin className="h-4.5 w-4.5" />
+                          </div>
+                        )}
+                      </div>
+                      <p className="text-xs font-bold text-teal-600 tracking-wider uppercase">
+                        {member.role}
+                      </p>
+                    </div>
+                    <p
+                      className="text-xs text-slate-500 leading-relaxed line-clamp-2 min-h-[2rem] pt-3.5 border-t border-slate-100"
+                      title={member.institution}
+                    >
+                      {member.institution}
+                    </p>
+                  </div>
+                </motion.a>
+              ))}
+            </div>
           ))}
         </div>
       </div>
