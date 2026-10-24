@@ -10,7 +10,7 @@ interface TeamMember {
   role: string;
   institution: string;
   imageUrl: string;
-  linkedinUrl: string;
+  linkedinUrl?: string;
   objectPosition?: string;
 }
 
@@ -37,6 +37,30 @@ export default function TeamSection() {
       imageUrl: 'https://i.postimg.cc/xCqtpqfF/1697125474536.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/joaofbmendonca/',
       objectPosition: 'center 15%'
+    },
+    {
+      id: 'elisa-avelas',
+      name: 'Elisa Avelas',
+      role: 'Marketing Intern',
+      institution: 'Artificial Owl',
+      imageUrl: '/team/elisa-avelas.jpg',
+      objectPosition: 'center 30%'
+    },
+    {
+      id: 'andreia-vitorino',
+      name: 'Andreia Vitorino',
+      role: 'Marketing Intern',
+      institution: 'Artificial Owl',
+      imageUrl: '/team/andreia-vitorino.webp',
+      objectPosition: 'center 20%'
+    },
+    {
+      id: 'gilberta-rufino',
+      name: 'Gilberta Rufino',
+      role: 'Marketing Intern',
+      institution: 'Artificial Owl',
+      imageUrl: '/team/gilberta-rufino.webp',
+      objectPosition: 'center 20%'
     },
     {
       id: 'rute-xavier',
@@ -118,13 +142,13 @@ export default function TeamSection() {
             <motion.a
               key={member.id}
               href={member.linkedinUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              target={member.linkedinUrl ? '_blank' : undefined}
+              rel={member.linkedinUrl ? 'noopener noreferrer' : undefined}
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="group bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_30px_-6px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col w-full sm:w-[280px] md:w-[260px] lg:w-[260px] xl:w-[270px] shrink-0 cursor-pointer block"
+              className={`group bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_30px_-6px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col w-full sm:w-[280px] md:w-[260px] lg:w-[260px] xl:w-[270px] shrink-0 block ${member.linkedinUrl ? 'cursor-pointer' : ''}`}
               id={member.id}
             >
               <div className="relative h-[310px] w-full overflow-hidden shrink-0 bg-slate-100">
@@ -143,12 +167,14 @@ export default function TeamSection() {
                     <h3 className="font-bold text-slate-900 text-lg group-hover:text-indigo-600 transition-colors duration-200 leading-tight">
                       {member.name}
                     </h3>
-                    <div
-                      className="text-slate-400 group-hover:text-[#0077b5] transition-colors mt-0.5"
-                      aria-label={`${member.name} LinkedIn Profile`}
-                    >
-                      <Linkedin className="h-4.5 w-4.5" />
-                    </div>
+                    {member.linkedinUrl && (
+                      <div
+                        className="text-slate-400 group-hover:text-[#0077b5] transition-colors mt-0.5"
+                        aria-label={`${member.name} LinkedIn Profile`}
+                      >
+                        <Linkedin className="h-4.5 w-4.5" />
+                      </div>
+                    )}
                   </div>
                   <p className="text-xs font-bold text-teal-600 tracking-wider uppercase">
                     {member.role}
