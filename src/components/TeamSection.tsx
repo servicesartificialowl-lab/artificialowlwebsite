@@ -27,7 +27,7 @@ export default function TeamSection() {
       name: 'João Simão',
       role: 'CTO',
       institution: 'Artificial Owl',
-      imageUrl: 'https://i.postimg.cc/XqfFs0Cq/1771244271931.jpg',
+      imageUrl: '/team/joao-simao.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/joão-simão-554a052ba/',
       objectPosition: 'center top'
     },
@@ -37,7 +37,7 @@ export default function TeamSection() {
       name: 'João Batalha Mendonça',
       role: 'CEO',
       institution: 'Artificial Owl',
-      imageUrl: 'https://i.postimg.cc/xCqtpqfF/1697125474536.jpg',
+      imageUrl: '/team/joao-batalha-mendonca.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/joaofbmendonca/',
       objectPosition: 'center 15%'
     },
@@ -76,7 +76,7 @@ export default function TeamSection() {
       institution: isPt
         ? 'Universidade Católica Portuguesa — Centro de Estudos Aplicados'
         : 'Universidade Católica Portuguesa — Centre for Applied Studies',
-      imageUrl: 'https://i.postimg.cc/T1f8zRBQ/1581009075774.jpg',
+      imageUrl: '/team/rute-xavier.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/rute-xavier/',
       objectPosition: 'center 15%'
     },
@@ -86,7 +86,7 @@ export default function TeamSection() {
       name: 'Rodrigo Queiroz e Melo',
       role: 'Advisor',
       institution: 'Artificial Owl / Universidade Católica Portuguesa',
-      imageUrl: 'https://i.postimg.cc/GmsMxW5v/1516238604126.jpg',
+      imageUrl: '/team/rodrigo-queiroz-melo.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/rodrigo-queiroz-e-melo-925b791/',
       objectPosition: 'center 8%'
     },
@@ -96,7 +96,7 @@ export default function TeamSection() {
       name: 'Mónica Zickermann',
       role: 'Advisor',
       institution: isPt ? 'Colégio Alemão do Porto' : 'German School of Porto',
-      imageUrl: 'https://i.postimg.cc/CLnC3jsT/1628487309528.jpg',
+      imageUrl: '/team/monica-zickermann.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/mónica-zickermann/',
       objectPosition: 'center 10%'
     }

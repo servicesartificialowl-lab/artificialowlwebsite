@@ -13,7 +13,7 @@ interface HeroProps {
 
 const carouselSlides = [
   {
-    src: 'https://i.postimg.cc/k470ktt1/teacher-overloaded-png.png',
+    src: '/hero/hero-1.webp',
     title: {
       pt: '1. Sobrecarga docente',
       en: '1. Teacher Overload'
@@ -24,7 +24,7 @@ const carouselSlides = [
     }
   },
   {
-    src: 'https://i.postimg.cc/SRMH9707/Chat-GPT-Image-5-07-2026-16-16-23-(2).png',
+    src: '/hero/hero-2.webp',
     title: {
       pt: '2. Artificial Owl entra em ação',
       en: '2. Artificial Owl Steps In'
@@ -35,7 +35,7 @@ const carouselSlides = [
     }
   },
   {
-    src: 'https://i.postimg.cc/vB602Y0z/Chat-GPT-Image-5-07-2026-16-19-55-(2).png',
+    src: '/hero/hero-3.webp',
     title: {
       pt: '3. Tempo de qualidade devolvido',
       en: '3. Quality Time Returned'
@@ -46,7 +46,7 @@ const carouselSlides = [
     }
   },
   {
-    src: 'https://i.postimg.cc/mDMSNdrJ/Chat-GPT-Image-5-07-2026-16-37-52-(1).png',
+    src: '/hero/hero-4.webp',
     title: {
       pt: '4. Feedback mais rico',
       en: '4. Richer Feedback'
@@ -57,7 +57,7 @@ const carouselSlides = [
     }
   },
   {
-    src: 'https://i.postimg.cc/CLKqwPgb/Chat-GPT-Image-5-07-2026-17-06-44-(1).png',
+    src: '/hero/hero-5.webp',
     title: {
       pt: '5. Foco em ensinar',
       en: '5. Focus on Teaching'
