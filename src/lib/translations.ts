@@ -520,36 +520,62 @@ export const translations = {
       afterSteps: ['Create', 'Grade', 'Analyze']
     },
     pricing: {
-      title: 'Simple plans for schools',
-      subtitle: 'Choose the plan that best fits the size and needs of your institution.',
-      standard: {
-        title: 'Standard Plan',
-        price: '21€',
-        period: '/ month',
-        billingNote: 'Billed annually',
-        billingDetail: '',
-        description: 'For schools looking to start simplifying the assessment process with AI.',
-        features: [
-          'AI-assisted grading',
-          'Centralized assessment management',
-          'Useful pedagogical data'
-        ],
-        cta: 'Buy now'
-      },
-      enterprise: {
-        title: 'Enterprise Plan',
-        price: 'Custom pricing',
-        period: '',
-        billingNote: 'For institutions with advanced needs',
-        billingDetail: 'Contact us for a personalized proposal.',
-        description: 'Tailored solution for schools, educational groups, or larger scale institutions.',
-        features: [
-          'Custom implementation',
-          'Dedicated support',
-          'Tailored terms for your institution'
-        ],
-        cta: 'Buy now'
-      }
+      title: 'Plans for teachers and schools',
+      subtitle: 'From individual teachers to entire school groups, choose the plan that fits you best.',
+      plans: [
+        {
+          id: 'digital-plus',
+          title: 'Digital+',
+          badge: 'Most popular',
+          description: 'For individual teachers.',
+          price: '24 €',
+          period: '/month, billed annually',
+          vatNote: 'VAT included',
+          savings: 'Save 72 € per year',
+          features: [
+            'Centralized management of classes and student grades',
+            'AI-assisted grading',
+            'Share grades and feedback with students',
+            'Student data anonymization and data protection',
+            'Cancel anytime'
+          ],
+          cta: 'Buy now'
+        },
+        {
+          id: 'pro',
+          title: 'Pro',
+          badge: '',
+          description: 'For individual teachers.',
+          price: '40 €',
+          period: '/month, billed annually',
+          vatNote: 'VAT included',
+          savings: 'Save 120 € per year',
+          features: [
+            'Everything in Digital+',
+            '3× more AI grading usage',
+            'Handwritten test grading'
+          ],
+          cta: 'Buy now'
+        },
+        {
+          id: 'school',
+          title: 'School',
+          badge: '',
+          description: 'For schools and school groups.',
+          price: 'On request',
+          period: 'per seat, monthly or annual',
+          vatNote: '',
+          savings: '',
+          features: [
+            'Seats assigned by email by the administrator',
+            'Mix of Digital+ and Pro across teachers',
+            'Onboarding and workshops included',
+            'Custom contract, with GDPR responsibilities set out in writing'
+          ],
+          cta: 'Contact us'
+        }
+      ],
+      footnote: 'You can change plans whenever you like. No questions asked.'
     },
     team: {
       title: 'Meet our team',
@@ -1075,36 +1101,62 @@ export const translations = {
       afterSteps: ['Criar', 'Corrigir', 'Analisar']
     },
     pricing: {
-      title: 'Planos simples para escolas',
-      subtitle: 'Escolha o plano mais adequado à dimensão e necessidades da sua instituição.',
-      standard: {
-        title: 'Plano Standard',
-        price: '21€',
-        period: '/ mês',
-        billingNote: 'Pago anualmente',
-        billingDetail: '',
-        description: 'Para escolas que querem começar a simplificar o processo de avaliação com IA.',
-        features: [
-          'Correção assistida por IA',
-          'Gestão centralizada de avaliações',
-          'Dados pedagógicos úteis'
-        ],
-        cta: 'Comprar'
-      },
-      enterprise: {
-        title: 'Plano Enterprise',
-        price: 'Preço personalizado',
-        period: '',
-        billingNote: 'Para instituições com necessidades avançadas',
-        billingDetail: 'Contacte-nos para uma proposta personalizada.',
-        description: 'Solução adaptada a escolas, grupos educativos ou instituições com maior escala.',
-        features: [
-          'Implementação personalizada',
-          'Suporte dedicado',
-          'Condições ajustadas à instituição'
-        ],
-        cta: 'Comprar'
-      }
+      title: 'Planos para professores e escolas',
+      subtitle: 'De professores individuais a agrupamentos inteiros, escolha o plano mais adequado para si.',
+      plans: [
+        {
+          id: 'digital-plus',
+          title: 'Digital+',
+          badge: 'Mais popular',
+          description: 'Para professores individuais.',
+          price: '24 €',
+          period: '/mês, faturado anualmente',
+          vatNote: 'IVA incluído',
+          savings: 'Poupa 72 € por ano',
+          features: [
+            'Gestão centralizada de turmas e notas dos alunos',
+            'Correção assistida por IA',
+            'Partilha de notas e feedback com os alunos',
+            'Anonimização de dados dos alunos e proteção de dados',
+            'Cancele quando quiser'
+          ],
+          cta: 'Comprar'
+        },
+        {
+          id: 'pro',
+          title: 'Pro',
+          badge: '',
+          description: 'Para professores individuais.',
+          price: '40 €',
+          period: '/mês, faturado anualmente',
+          vatNote: 'IVA incluído',
+          savings: 'Poupa 120 € por ano',
+          features: [
+            'Tudo o que há no Digital+',
+            '3× mais uso de correção por IA',
+            'Correção de testes manuscritos'
+          ],
+          cta: 'Comprar'
+        },
+        {
+          id: 'school',
+          title: 'Escola',
+          badge: '',
+          description: 'Para escolas e agrupamentos.',
+          price: 'Sob proposta',
+          period: 'por assento, mensal ou anual',
+          vatNote: '',
+          savings: '',
+          features: [
+            'Assentos atribuídos por email pelo administrador',
+            'Mistura de Digital+ e Pro entre professores',
+            'Onboarding e workshops incluídos',
+            'Contrato à medida, com repartição de responsabilidades RGPD por escrito'
+          ],
+          cta: 'Falar connosco'
+        }
+      ],
+      footnote: 'Pode mudar de plano quando quiser. Sem perguntas.'
     },
     team: {
       title: 'Conheça a nossa equipa',

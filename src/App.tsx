@@ -76,7 +76,7 @@ export default function App() {
           <TeamSection />
 
           {/* Pricing Section */}
-          <PricingSection />
+          <PricingSection onBookDemo={handleOpenDemo} />
 
           {/* 10. Final CTA & Footer Section */}
           <FinalCTA onBookDemo={handleOpenDemo} />
