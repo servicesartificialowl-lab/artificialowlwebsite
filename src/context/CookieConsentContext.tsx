@@ -31,7 +31,36 @@ const defaultPreferences: CookiePreferences = {
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
+    clarity?: ((...args: unknown[]) => void) & { q?: unknown[] };
   }
+}
+
+// Microsoft Clarity project ID (clarity.microsoft.com → Settings → Overview).
+const CLARITY_ID = 'z4ckub9nxb';
+
+// Loads Microsoft Clarity only after the visitor accepts analytics cookies,
+// and tells it to stop tracking if that consent is withdrawn later.
+function updateClarity(preferences: CookiePreferences) {
+  if (!CLARITY_ID) return;
+
+  if (!preferences.analytics) {
+    window.clarity?.('consent', false);
+    return;
+  }
+
+  if (window.clarity) {
+    window.clarity('consent');
+    return;
+  }
+
+  const queue: unknown[] = [];
+  window.clarity = Object.assign((...args: unknown[]) => { queue.push(args); }, { q: queue });
+
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = `https://www.clarity.ms/tag/${CLARITY_ID}`;
+  document.head.appendChild(script);
+  window.clarity?.('consent');
 }
 
 // Tells Google tags (GA4, and later GTM/Ads) what the visitor consented to.
@@ -67,8 +96,10 @@ export function CookieConsentProvider({
     );
 
     if (savedPreferences) {
-      setPreferences(JSON.parse(savedPreferences));
+      const parsed: CookiePreferences = JSON.parse(savedPreferences);
+      setPreferences(parsed);
       setHasChosen(true);
+      updateClarity(parsed);
     }
   }, []);
 
@@ -76,6 +107,7 @@ export function CookieConsentProvider({
     setPreferences(newPreferences);
     setHasChosen(true);
     updateGoogleConsent(newPreferences);
+    updateClarity(newPreferences);
 
     localStorage.setItem(
       'artificialOwlCookiePreferences',
