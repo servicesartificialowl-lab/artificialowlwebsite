@@ -84,12 +84,22 @@ export default function CookieBanner() {
 
             <div className="mt-6 space-y-4">
               <label className="flex justify-between gap-4">
-                <span>Necessary</span>
+                <span>
+                  <span className="block font-medium text-slate-900">Necessary</span>
+                  <span className="block text-xs text-slate-500">
+                    Required for the website to work, such as remembering your cookie choices.
+                  </span>
+                </span>
                 <input type="checkbox" checked disabled />
               </label>
 
               <label className="flex justify-between gap-4">
-                <span>Analytics</span>
+                <span>
+                  <span className="block font-medium text-slate-900">Analytics</span>
+                  <span className="block text-xs text-slate-500">
+                    Help us understand how the website is used (Google Analytics and Microsoft Clarity).
+                  </span>
+                </span>
                 <input
                   type="checkbox"
                   checked={analytics}
@@ -98,7 +108,12 @@ export default function CookieBanner() {
               </label>
 
               <label className="flex justify-between gap-4">
-                <span>Functional</span>
+                <span>
+                  <span className="block font-medium text-slate-900">Functional</span>
+                  <span className="block text-xs text-slate-500">
+                    Remember extra settings to improve your experience.
+                  </span>
+                </span>
                 <input
                   type="checkbox"
                   checked={functional}
@@ -107,7 +122,12 @@ export default function CookieBanner() {
               </label>
 
               <label className="flex justify-between gap-4">
-                <span>Marketing</span>
+                <span>
+                  <span className="block font-medium text-slate-900">Marketing</span>
+                  <span className="block text-xs text-slate-500">
+                    Measure and personalise our advertising.
+                  </span>
+                </span>
                 <input
                   type="checkbox"
                   checked={marketing}
