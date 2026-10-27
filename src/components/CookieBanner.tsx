@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { useCookieConsent } from '../context/CookieConsentContext';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../lib/translations';
 
 export default function CookieBanner() {
   const {
@@ -9,6 +11,8 @@ export default function CookieBanner() {
     rejectNonEssential,
     savePreferences,
   } = useCookieConsent();
+  const { language } = useLanguage();
+  const t = translations[language].cookieBanner;
 
   const [showPreferences, setShowPreferences] = useState(false);
   const [analytics, setAnalytics] = useState(preferences.analytics);
@@ -30,19 +34,26 @@ export default function CookieBanner() {
     setShowPreferences(false);
   };
 
+  const categoryLabel = (category: keyof typeof t.categories) => (
+    <span>
+      <span className="block font-medium text-slate-900">{t.categories[category].label}</span>
+      <span className="block text-xs text-slate-500">
+        {t.categories[category].description}
+      </span>
+    </span>
+  );
+
   return (
     <>
       <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-slate-200 bg-white shadow-2xl">
         <div className="mx-auto max-w-6xl px-4 py-5 md:flex md:items-center md:justify-between md:gap-6">
           <div className="mb-4 md:mb-0">
             <h2 className="text-lg font-semibold text-slate-900">
-              Cookies & Privacy
+              {t.title}
             </h2>
 
             <p className="mt-1 max-w-2xl text-sm text-slate-600">
-              We use essential cookies to make the website work. With your
-              permission, we may also use analytics, functional and marketing
-              technologies.
+              {t.description}
             </p>
           </div>
 
@@ -51,21 +62,21 @@ export default function CookieBanner() {
               onClick={rejectNonEssential}
               className="rounded-lg border border-slate-300 px-4 py-2 font-medium text-slate-700"
             >
-              Reject non-essential
+              {t.rejectNonEssential}
             </button>
 
             <button
               onClick={() => setShowPreferences(true)}
               className="rounded-lg border border-slate-300 px-4 py-2 font-medium text-slate-700"
             >
-              Manage preferences
+              {t.managePreferences}
             </button>
 
             <button
               onClick={acceptAll}
               className="rounded-lg bg-teal-500 px-4 py-2 font-semibold text-white"
             >
-              Accept all
+              {t.acceptAll}
             </button>
           </div>
         </div>
@@ -75,31 +86,21 @@ export default function CookieBanner() {
         <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/40 px-4">
           <div className="w-full max-w-lg rounded-2xl bg-white p-6 shadow-2xl">
             <h2 className="text-xl font-semibold text-slate-900">
-              Cookie preferences
+              {t.preferencesTitle}
             </h2>
 
             <p className="mt-1 text-sm text-slate-600">
-              Choose which optional technologies you allow.
+              {t.preferencesSubtitle}
             </p>
 
             <div className="mt-6 space-y-4">
               <label className="flex justify-between gap-4">
-                <span>
-                  <span className="block font-medium text-slate-900">Necessary</span>
-                  <span className="block text-xs text-slate-500">
-                    Required for the website to work, such as remembering your cookie choices.
-                  </span>
-                </span>
+                {categoryLabel('necessary')}
                 <input type="checkbox" checked disabled />
               </label>
 
               <label className="flex justify-between gap-4">
-                <span>
-                  <span className="block font-medium text-slate-900">Analytics</span>
-                  <span className="block text-xs text-slate-500">
-                    Help us understand how the website is used (Google Analytics and Microsoft Clarity).
-                  </span>
-                </span>
+                {categoryLabel('analytics')}
                 <input
                   type="checkbox"
                   checked={analytics}
@@ -108,12 +109,7 @@ export default function CookieBanner() {
               </label>
 
               <label className="flex justify-between gap-4">
-                <span>
-                  <span className="block font-medium text-slate-900">Functional</span>
-                  <span className="block text-xs text-slate-500">
-                    Remember extra settings to improve your experience.
-                  </span>
-                </span>
+                {categoryLabel('functional')}
                 <input
                   type="checkbox"
                   checked={functional}
@@ -122,12 +118,7 @@ export default function CookieBanner() {
               </label>
 
               <label className="flex justify-between gap-4">
-                <span>
-                  <span className="block font-medium text-slate-900">Marketing</span>
-                  <span className="block text-xs text-slate-500">
-                    Measure and personalise our advertising.
-                  </span>
-                </span>
+                {categoryLabel('marketing')}
                 <input
                   type="checkbox"
                   checked={marketing}
@@ -141,14 +132,14 @@ export default function CookieBanner() {
                 onClick={() => setShowPreferences(false)}
                 className="rounded-lg border border-slate-300 px-4 py-2"
               >
-                Cancel
+                {t.cancel}
               </button>
 
               <button
                 onClick={handleSave}
                 className="rounded-lg bg-teal-500 px-4 py-2 font-semibold text-white"
               >
-                Save preferences
+                {t.save}
               </button>
             </div>
           </div>

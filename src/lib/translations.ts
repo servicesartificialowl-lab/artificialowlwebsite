@@ -580,6 +580,23 @@ export const translations = {
     team: {
       title: 'Meet our team',
       subtitle: 'The people behind Artificial Owl.'
+    },
+    cookieBanner: {
+      title: 'Cookies & Privacy',
+      description: 'We use essential cookies to make the website work. With your permission, we may also use analytics, functional and marketing technologies.',
+      rejectNonEssential: 'Reject non-essential',
+      managePreferences: 'Manage preferences',
+      acceptAll: 'Accept all',
+      preferencesTitle: 'Cookie preferences',
+      preferencesSubtitle: 'Choose which optional technologies you allow.',
+      categories: {
+        necessary: { label: 'Necessary', description: 'Required for the website to work, such as remembering your cookie choices.' },
+        analytics: { label: 'Analytics', description: 'Help us understand how the website is used (Google Analytics and Microsoft Clarity).' },
+        functional: { label: 'Functional', description: 'Remember extra settings to improve your experience.' },
+        marketing: { label: 'Marketing', description: 'Measure and personalise our advertising.' }
+      },
+      cancel: 'Cancel',
+      save: 'Save preferences'
     }
   },
   pt: {
@@ -1161,6 +1178,23 @@ export const translations = {
     team: {
       title: 'Conheça a nossa equipa',
       subtitle: 'As pessoas por trás da Artificial Owl.'
+    },
+    cookieBanner: {
+      title: 'Cookies e Privacidade',
+      description: 'Utilizamos cookies essenciais para o site funcionar. Com a sua autorização, podemos também utilizar tecnologias de análise, funcionais e de marketing.',
+      rejectNonEssential: 'Recusar não essenciais',
+      managePreferences: 'Gerir preferências',
+      acceptAll: 'Aceitar todos',
+      preferencesTitle: 'Preferências de cookies',
+      preferencesSubtitle: 'Escolha que tecnologias opcionais autoriza.',
+      categories: {
+        necessary: { label: 'Necessários', description: 'Indispensáveis para o site funcionar, por exemplo para guardar as suas escolhas de cookies.' },
+        analytics: { label: 'Análise', description: 'Ajudam-nos a perceber como o site é utilizado (Google Analytics e Microsoft Clarity).' },
+        functional: { label: 'Funcionais', description: 'Guardam definições adicionais para melhorar a sua experiência.' },
+        marketing: { label: 'Marketing', description: 'Medem e personalizam a nossa publicidade.' }
+      },
+      cancel: 'Cancelar',
+      save: 'Guardar preferências'
     }
   }
 };
