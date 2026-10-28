@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Menu, X, ArrowRight, ShieldCheck, ExternalLink } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../lib/translations';
 
@@ -60,7 +60,7 @@ export default function Navbar({ onBookDemo }: NavbarProps) {
                 <polygon points="11.2,14 12.8,14 12,18.5" fill="currentColor" stroke="none" />
               </svg>
             </div>
-            <span className={`font-extrabold tracking-tight text-lg sm:text-xl transition-colors duration-200 ${
+            <span className={`font-extrabold tracking-tight text-lg sm:text-xl whitespace-nowrap transition-colors duration-200 ${
               isScrolled ? 'text-[#0F172A]' : 'text-white'
             }`}>
               Artificial Owl
@@ -68,12 +68,12 @@ export default function Navbar({ onBookDemo }: NavbarProps) {
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden xl:flex items-center gap-0.5 ml-4">
             {navLinks.map(link => (
               <a
                 key={link.label}
                 href={link.href}
-                className={`px-4 py-2 text-[14px] font-medium rounded-lg transition-all duration-150 ${
+                className={`px-2.5 py-2 text-[14px] font-medium rounded-lg whitespace-nowrap transition-all duration-150 ${
                   isScrolled
                     ? 'text-slate-600 hover:text-teal-500 hover:bg-slate-50'
                     : 'text-slate-200 hover:text-white hover:bg-white/5'
@@ -85,7 +85,7 @@ export default function Navbar({ onBookDemo }: NavbarProps) {
           </nav>
 
           {/* CTAs */}
-          <div className="hidden sm:flex items-center gap-4">
+          <div className="hidden sm:flex items-center gap-3">
             {/* Language Switcher pill */}
             <div className={`flex items-center rounded-lg p-0.5 border transition-colors duration-300 ${
               isScrolled 
@@ -118,18 +118,15 @@ export default function Navbar({ onBookDemo }: NavbarProps) {
               </button>
             </div>
 
-            {/* Login Button "Entrar" */}
+            {/* "Go to platform" button (opens the Teach app) */}
             <a
               href="https://teach-app.pt/"
               target="_blank"
               rel="noopener noreferrer"
-              className={`text-[14px] font-semibold transition-all cursor-pointer font-sans px-2 py-1 ${
-                isScrolled 
-                  ? 'text-slate-600 hover:text-slate-900 hover:underline' 
-                  : 'text-slate-300 hover:text-white hover:underline'
-              }`}
+              className="px-4 py-2 bg-teal-500 text-white font-semibold text-sm rounded-xl hover:bg-teal-600 transition-all active:scale-[0.98] shadow-sm hover:shadow-md cursor-pointer font-sans whitespace-nowrap inline-flex items-center gap-1.5"
             >
-              {language === 'pt' ? 'Entrar' : 'Log In'}
+              {t.login}
+              <ExternalLink className="h-3.5 w-3.5" />
             </a>
 
             <button
@@ -141,7 +138,7 @@ export default function Navbar({ onBookDemo }: NavbarProps) {
           </div>
 
           {/* Mobile hamburger menu and switcher */}
-          <div className="flex items-center gap-2 lg:hidden">
+          <div className="flex items-center gap-2 xl:hidden">
             {/* Language Switcher on mobile header bar */}
             <div className={`flex items-center rounded-lg p-0.5 border ${
               isScrolled 
@@ -189,7 +186,7 @@ export default function Navbar({ onBookDemo }: NavbarProps) {
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-b border-slate-100 shadow-xl py-6 px-4 animate-in fade-in slide-in-from-top-5 duration-200">
+        <div className="xl:hidden absolute top-full left-0 right-0 bg-white border-b border-slate-100 shadow-xl py-6 px-4 animate-in fade-in slide-in-from-top-5 duration-200">
           <div className="space-y-2">
             {navLinks.map(link => (
               <a
@@ -207,9 +204,10 @@ export default function Navbar({ onBookDemo }: NavbarProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="w-full flex items-center justify-center px-5 py-3 text-slate-700 hover:text-slate-900 font-semibold text-base hover:bg-slate-50 rounded-xl transition-all border border-slate-200/60 font-sans"
+                className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-teal-500 text-white font-semibold text-base hover:bg-teal-600 rounded-xl transition-all shadow-md shadow-teal-100/50 font-sans"
               >
-                {language === 'pt' ? 'Entrar' : 'Log In'}
+                {t.login}
+                <ExternalLink className="h-4 w-4" />
               </a>
               <button
                 onClick={() => {
