@@ -123,11 +123,7 @@ export default function Navbar({ onBookDemo }: NavbarProps) {
               href="https://teach-app.pt/"
               target="_blank"
               rel="noopener noreferrer"
-              className={`px-4 py-2 text-sm font-semibold rounded-xl border transition-all cursor-pointer font-sans whitespace-nowrap inline-flex items-center gap-1.5 ${
-                isScrolled
-                  ? 'text-teal-600 border-teal-500/60 hover:bg-teal-50'
-                  : 'text-teal-300 border-teal-400/50 hover:bg-white/5 hover:text-teal-200'
-              }`}
+              className="px-4 py-2 bg-teal-500 text-white font-semibold text-sm rounded-xl hover:bg-teal-600 transition-all active:scale-[0.98] shadow-sm hover:shadow-md cursor-pointer font-sans whitespace-nowrap inline-flex items-center gap-1.5"
             >
               {t.login}
               <ExternalLink className="h-3.5 w-3.5" />
@@ -208,7 +204,7 @@ export default function Navbar({ onBookDemo }: NavbarProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="w-full flex items-center justify-center gap-2 px-5 py-3 text-teal-600 font-semibold text-base hover:bg-teal-50 rounded-xl transition-all border border-teal-500/60 font-sans"
+                className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-teal-500 text-white font-semibold text-base hover:bg-teal-600 rounded-xl transition-all shadow-md shadow-teal-100/50 font-sans"
               >
                 {t.login}
                 <ExternalLink className="h-4 w-4" />
