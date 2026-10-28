@@ -4,8 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../lib/translations';
 import {
   ArrowRight,
-  Play,
-  ExternalLink
+  Play
 } from 'lucide-react';
 
 interface HeroProps {
@@ -144,24 +143,6 @@ export default function Hero({ onBookDemo }: HeroProps) {
                 <Play className="h-4.5 w-4.5 text-teal-400 fill-teal-400/20" />
                 {t.seeHowItWorks}
               </button>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="mt-5 flex justify-center lg:justify-start"
-            >
-              <a
-                id="hero-cta-platform"
-                href="https://teach-app.pt/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 -mx-4 text-teal-400 font-bold text-base rounded-xl hover:text-teal-300 hover:bg-white/5 transition-all font-sans"
-              >
-                {t.goToPlatform}
-                <ExternalLink className="h-4 w-4" />
-              </a>
             </motion.div>
           </div>
 
