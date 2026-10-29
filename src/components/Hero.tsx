@@ -4,6 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../lib/translations';
 import {
   ArrowRight,
+  ExternalLink,
   Play
 } from 'lucide-react';
 
@@ -125,12 +126,12 @@ export default function Hero({ onBookDemo }: HeroProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-3 max-w-md mx-auto lg:mx-0"
             >
               <button
                 id="hero-cta-demo"
                 onClick={onBookDemo}
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-teal-500 text-white font-bold text-base rounded-2xl shadow-lg shadow-teal-500/20 hover:bg-teal-400 hover:shadow-teal-500/45 hover:-translate-y-0.5 active:translate-y-0 transition-all cursor-pointer border border-teal-400/30 font-sans whitespace-nowrap min-w-fit"
+                className="sm:col-span-2 lg:col-span-1 xl:col-span-2 inline-flex items-center justify-center gap-3 px-6 py-4 bg-teal-500 text-white font-bold text-base rounded-2xl shadow-lg shadow-teal-500/20 hover:bg-teal-400 hover:shadow-teal-500/45 hover:-translate-y-0.5 active:translate-y-0 transition-all cursor-pointer border border-teal-400/30 font-sans whitespace-nowrap min-w-fit"
               >
                 {t.bookDemo}
                 <ArrowRight className="h-5 w-5 shrink-0" />
@@ -138,11 +139,21 @@ export default function Hero({ onBookDemo }: HeroProps) {
               <button
                 id="hero-cta-video"
                 onClick={handleScrollToCarousel}
-                className="flex items-center justify-center gap-2 px-8 py-4 bg-white/5 text-slate-200 font-bold text-base rounded-2xl border border-white/10 hover:border-white/20 hover:bg-white/10 hover:text-white transition-all font-sans cursor-pointer whitespace-nowrap min-w-fit"
+                className="flex items-center justify-center gap-2 px-4 py-3.5 bg-white/5 text-slate-200 font-bold text-sm rounded-2xl border border-white/10 hover:border-white/20 hover:bg-white/10 hover:text-white transition-all font-sans cursor-pointer whitespace-nowrap"
               >
-                <Play className="h-4.5 w-4.5 text-teal-400 fill-teal-400/20" />
+                <Play className="h-4 w-4 text-teal-400 fill-teal-400/20" />
                 {t.seeHowItWorks}
               </button>
+              <a
+                id="hero-cta-platform"
+                href="https://teach-app.pt/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 px-4 py-3.5 bg-white text-slate-900 font-bold text-sm rounded-2xl border border-white hover:bg-slate-100 transition-all font-sans cursor-pointer whitespace-nowrap"
+              >
+                {t.goToPlatform}
+                <ExternalLink className="h-4 w-4 text-teal-600" />
+              </a>
             </motion.div>
           </div>
 
