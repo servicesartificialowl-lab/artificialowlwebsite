@@ -33,17 +33,17 @@ export default function ComparisonSection() {
     }
   };
 
-  // Icon mapping helper for Right side (With Artificial Owl) - styled in bright #14B8A6
+  // Icon mapping helper for Right side (With Artificial Owl) - styled in bright #4A7BC8
   const getAfterIcon = (index: number) => {
     switch (index) {
       case 0:
-        return <CheckCircle2 className="h-5 w-5 text-[#14B8A6]" />;
+        return <CheckCircle2 className="h-5 w-5 text-[#4A7BC8]" />;
       case 1:
-        return <BrainCircuit className="h-5 w-5 text-[#14B8A6]" />;
+        return <BrainCircuit className="h-5 w-5 text-[#4A7BC8]" />;
       case 2:
-        return <LineChart className="h-5 w-5 text-[#14B8A6]" />;
+        return <LineChart className="h-5 w-5 text-[#4A7BC8]" />;
       default:
-        return <Sparkles className="h-5 w-5 text-[#14B8A6]" />;
+        return <Sparkles className="h-5 w-5 text-[#4A7BC8]" />;
     }
   };
 
@@ -86,7 +86,7 @@ export default function ComparisonSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-[#F8FAFC] rounded-2xl border border-[#D8E2F0] p-8 flex flex-col justify-between shadow-sm relative group"
+            className="bg-[#f1f2f4] rounded-2xl border border-[#D8E2F0] p-8 flex flex-col justify-between shadow-sm relative group"
           >
             <div>
               {/* Badge & Title */}
@@ -113,7 +113,7 @@ export default function ComparisonSection() {
               </ul>
 
               {/* Visual Workflow Map */}
-              <div className="bg-[#F8FAFC] rounded-xl p-4 mb-8 border border-[#D8E2F0]/80">
+              <div className="bg-[#f1f2f4] rounded-xl p-4 mb-8 border border-[#D8E2F0]/80">
                 <span className="block text-[11px] uppercase tracking-wider text-[#94A3B8] font-semibold mb-3">
                   {language === 'pt' ? 'FLUXO DE TRABALHO' : 'WORKFLOW'}
                 </span>
@@ -146,7 +146,7 @@ export default function ComparisonSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-[#0F172A] text-white rounded-2xl p-8 flex flex-col justify-between shadow-xl relative overflow-hidden group border border-[#4F46E5] ring-4 ring-[#4F46E5]/10"
+            className="bg-[#14233B] text-white rounded-2xl p-8 flex flex-col justify-between shadow-xl relative overflow-hidden group border border-[#2B5BA8] ring-4 ring-[#2B5BA8]/10"
           >
             <div className="relative z-10">
               {/* Badge & Title */}
@@ -154,8 +154,8 @@ export default function ComparisonSection() {
                 <h3 className="text-xl font-semibold text-white">
                   {t.afterTitle}
                 </h3>
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-[rgba(20,184,166,0.12)] border border-[rgba(20,184,166,0.35)] text-[#14B8A6]">
-                  <Sparkles className="h-3.5 w-3.5 text-[#14B8A6]" />
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-[rgba(74, 123, 200,0.12)] border border-[rgba(74, 123, 200,0.35)] text-[#4A7BC8]">
+                  <Sparkles className="h-3.5 w-3.5 text-[#4A7BC8]" />
                   {language === 'pt' ? 'Centralizado' : 'Centralized'}
                 </span>
               </div>
@@ -164,7 +164,7 @@ export default function ComparisonSection() {
               <ul className="space-y-4 mb-8">
                 {t.afterPoints.map((point, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <div className="mt-0.5 p-1 rounded-lg bg-slate-800/80 text-[#14B8A6] border border-slate-700/50">
+                    <div className="mt-0.5 p-1 rounded-lg bg-slate-800/80 text-[#4A7BC8] border border-slate-700/50">
                       {getAfterIcon(index)}
                     </div>
                     <span className="text-[#CBD5E1] font-normal leading-relaxed">{point}</span>
@@ -180,11 +180,11 @@ export default function ComparisonSection() {
                 <div className="flex items-center flex-wrap gap-2 text-xs">
                   {t.afterSteps.map((step, idx) => (
                     <React.Fragment key={idx}>
-                      <span className="px-3 py-1.5 rounded-lg bg-[#4F46E5]/20 text-white font-medium border border-[#4F46E5]/40 shadow-[0_0_12px_rgba(79,70,229,0.15)]">
+                      <span className="px-3 py-1.5 rounded-lg bg-[#2B5BA8]/20 text-white font-medium border border-[#2B5BA8]/40 shadow-[0_0_12px_rgba(43, 91, 168,0.15)]">
                         {step}
                       </span>
                       {idx < t.afterSteps.length - 1 && (
-                        <ArrowRight className="h-3.5 w-3.5 text-[#14B8A6] shrink-0" />
+                        <ArrowRight className="h-3.5 w-3.5 text-[#4A7BC8] shrink-0" />
                       )}
                     </React.Fragment>
                   ))}
@@ -194,7 +194,7 @@ export default function ComparisonSection() {
 
             {/* Column Footer */}
             <div className="mt-auto pt-5 border-t border-slate-800 flex items-center justify-between text-sm font-semibold relative z-10">
-              <span className="text-[#14B8A6]">
+              <span className="text-[#4A7BC8]">
                 {t.afterFooter}
               </span>
             </div>

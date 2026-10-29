@@ -31,6 +31,63 @@
 @theme {
   --font-sans: "Chamberi Display", Georgia, "Times New Roman", serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Brand colours, matched to the Teach platform (teach-app.pt): blue #2B5BA8 and navy #14233B.
+     teal and indigo both map to the brand blue so the whole site uses one accent colour. */
+  --color-brand-50: #eef3fb;
+  --color-brand-100: #dce6f6;
+  --color-brand-200: #b3c8ec;
+  --color-brand-300: #7fa2dc;
+  --color-brand-400: #4a7bc8;
+  --color-brand-500: #2b5ba8;
+  --color-brand-600: #244c8c;
+  --color-brand-700: #1e4076;
+  --color-brand-800: #1a3561;
+  --color-brand-900: #172c4e;
+  --color-brand-950: #14233b;
+
+  --color-teal-50: var(--color-brand-50);
+  --color-teal-100: var(--color-brand-100);
+  --color-teal-200: var(--color-brand-200);
+  --color-teal-300: var(--color-brand-300);
+  --color-teal-400: var(--color-brand-400);
+  --color-teal-500: var(--color-brand-500);
+  --color-teal-600: var(--color-brand-600);
+  --color-teal-700: var(--color-brand-700);
+  --color-teal-800: var(--color-brand-800);
+  --color-teal-900: var(--color-brand-900);
+  --color-teal-950: var(--color-brand-950);
+
+  --color-indigo-50: var(--color-brand-50);
+  --color-indigo-100: var(--color-brand-100);
+  --color-indigo-200: var(--color-brand-200);
+  --color-indigo-300: var(--color-brand-300);
+  --color-indigo-400: var(--color-brand-400);
+  --color-indigo-500: var(--color-brand-500);
+  --color-indigo-600: var(--color-brand-600);
+  --color-indigo-700: var(--color-brand-700);
+  --color-indigo-800: var(--color-brand-800);
+  --color-indigo-900: var(--color-brand-900);
+  --color-indigo-950: var(--color-brand-950);
+
+  /* Greys with the same blue-navy tint as Teach */
+  --color-slate-50: #f1f2f4;
+  --color-slate-100: #eaecef;
+  --color-slate-200: #d9dde3;
+  --color-slate-300: #bac2cd;
+  --color-slate-400: #8a95a6;
+  --color-slate-500: #6a7689;
+  --color-slate-600: #4d5a70;
+  --color-slate-700: #33425a;
+  --color-slate-800: #223149;
+  --color-slate-900: #14233b;
+  --color-slate-950: #0d1829;
+
+  /* Butter yellow, used only for highlights (badges, underline). Always with navy text. */
+  --color-butter-100: #fdf6dd;
+  --color-butter-300: #f7e3a1;
+  --color-butter-500: #e6cc78;
+  --color-butter-800: #6b5512;
 }
 
 html,
@@ -66,21 +123,21 @@ html {
 }
 
 body {
-  background-color: #f8fafc;
-  color: #0f172a;
+  background-color: #f1f2f4;
+  color: #14233B;
   overflow-x: hidden;
 }
 
 /* Custom styles for professional, very subtle gradient backgrounds */
 .glow-indigo {
   filter: blur(140px);
-  background: radial-gradient(circle, rgba(79, 70, 229, 0.06) 0%, rgba(99, 102, 241, 0.02) 60%, rgba(0, 0, 0, 0) 100%);
+  background: radial-gradient(circle, rgba(43, 91, 168, 0.06) 0%, rgba(43, 91, 168, 0.02) 60%, rgba(0, 0, 0, 0) 100%);
   opacity: 0.5;
 }
 
 .glow-teal {
   filter: blur(120px);
-  background: radial-gradient(circle, rgba(20, 184, 166, 0.04) 0%, rgba(20, 184, 166, 0.01) 60%, rgba(0, 0, 0, 0) 100%);
+  background: radial-gradient(circle, rgba(74, 123, 200, 0.04) 0%, rgba(74, 123, 200, 0.01) 60%, rgba(0, 0, 0, 0) 100%);
   opacity: 0.4;
 }
 

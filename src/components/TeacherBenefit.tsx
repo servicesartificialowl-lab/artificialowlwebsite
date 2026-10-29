@@ -133,74 +133,74 @@ export default function TeacherBenefit() {
                   <circle cx="40" cy="40" r="35" fill="url(#owl-glow)" opacity="0.15" />
                   <circle cx="40" cy="40" r="25" fill="url(#owl-core)" />
                   {/* Owl Eyes */}
-                  <circle cx="31" cy="35" r="5" fill="#1E293B" />
-                  <circle cx="31" cy="35" r="2" fill="#2DD4BF" />
-                  <circle cx="49" cy="35" r="5" fill="#1E293B" />
-                  <circle cx="49" cy="35" r="2" fill="#2DD4BF" />
+                  <circle cx="31" cy="35" r="5" fill="#223149" />
+                  <circle cx="31" cy="35" r="2" fill="#7FA2DC" />
+                  <circle cx="49" cy="35" r="5" fill="#223149" />
+                  <circle cx="49" cy="35" r="2" fill="#7FA2DC" />
                   {/* Beak */}
                   <polygon points="40,40 37,47 43,47" fill="#F59E0B" />
                   {/* Owl Feathers/Ears details */}
-                  <path d="M22 22C24 16 28 18 28 18" stroke="#818CF8" strokeWidth="2.5" strokeLinecap="round" />
-                  <path d="M58 22C56 16 52 18 52 18" stroke="#818CF8" strokeWidth="2.5" strokeLinecap="round" />
+                  <path d="M22 22C24 16 28 18 28 18" stroke="#7FA2DC" strokeWidth="2.5" strokeLinecap="round" />
+                  <path d="M58 22C56 16 52 18 52 18" stroke="#7FA2DC" strokeWidth="2.5" strokeLinecap="round" />
                 </g>
 
                 {/* Left Figure: Smiling Teacher */}
                 <g transform="translate(60, 100)">
                   {/* Body/Shirt */}
-                  <path d="M30 110C30 90 45 80 65 80C85 80 100 90 100 110V140H30V110Z" fill="#4F46E5" />
+                  <path d="M30 110C30 90 45 80 65 80C85 80 100 90 100 110V140H30V110Z" fill="#2B5BA8" />
                   {/* Collar/Details */}
-                  <path d="M55 80L65 95L75 80" stroke="#818CF8" strokeWidth="2" />
+                  <path d="M55 80L65 95L75 80" stroke="#7FA2DC" strokeWidth="2" />
                   {/* Neck */}
                   <rect x="58" y="65" width="14" height="15" rx="2" fill="#FEE2E2" />
                   {/* Face */}
                   <circle cx="65" cy="45" r="25" fill="#FEE2E2" />
                   {/* Hair */}
-                  <path d="M38 35C38 18 50 15 65 15C80 15 92 18 92 35C92 40 88 25 65 25C42 25 38 40 38 35Z" fill="#1E293B" />
+                  <path d="M38 35C38 18 50 15 65 15C80 15 92 18 92 35C92 40 88 25 65 25C42 25 38 40 38 35Z" fill="#223149" />
                   {/* Glasses */}
-                  <circle cx="56" cy="45" r="6" stroke="#4F46E5" strokeWidth="2" />
-                  <circle cx="74" cy="45" r="6" stroke="#4F46E5" strokeWidth="2" />
-                  <line x1="62" y1="45" x2="68" y2="45" stroke="#4F46E5" strokeWidth="2" />
+                  <circle cx="56" cy="45" r="6" stroke="#2B5BA8" strokeWidth="2" />
+                  <circle cx="74" cy="45" r="6" stroke="#2B5BA8" strokeWidth="2" />
+                  <line x1="62" y1="45" x2="68" y2="45" stroke="#2B5BA8" strokeWidth="2" />
                   {/* Smile */}
-                  <path d="M58 58C62 61 68 61 72 58" stroke="#1E293B" strokeWidth="1.5" strokeLinecap="round" />
+                  <path d="M58 58C62 61 68 61 72 58" stroke="#223149" strokeWidth="1.5" strokeLinecap="round" />
                 </g>
 
                 {/* Right Figure: High-school student looking up */}
                 <g transform="translate(230, 130)">
                   {/* Body/Hoodie */}
-                  <path d="M20 90C20 75 35 65 55 65C75 65 90 75 90 90V110H20V90Z" fill="#14B8A6" />
+                  <path d="M20 90C20 75 35 65 55 65C75 65 90 75 90 90V110H20V90Z" fill="#4A7BC8" />
                   {/* Neck */}
                   <rect x="48" y="52" width="14" height="15" rx="2" fill="#F3F4F6" />
                   {/* Face */}
                   <circle cx="55" cy="35" r="22" fill="#F3F4F6" />
                   {/* Hair/Cap */}
-                  <path d="M33 28C33 15 45 12 55 12C65 12 77 15 77 28" fill="#1E293B" stroke="#1E293B" strokeWidth="2" />
-                  <rect x="40" y="8" width="30" height="6" rx="3" fill="#4F46E5" />
+                  <path d="M33 28C33 15 45 12 55 12C65 12 77 15 77 28" fill="#223149" stroke="#223149" strokeWidth="2" />
+                  <rect x="40" y="8" width="30" height="6" rx="3" fill="#2B5BA8" />
                   {/* Eyes / Smile */}
-                  <circle cx="47" cy="34" r="2" fill="#1E293B" />
-                  <circle cx="63" cy="34" r="2" fill="#1E293B" />
-                  <path d="M49 46C52 48 58 48 61 46" stroke="#1E293B" strokeWidth="1.5" strokeLinecap="round" />
+                  <circle cx="47" cy="34" r="2" fill="#223149" />
+                  <circle cx="63" cy="34" r="2" fill="#223149" />
+                  <path d="M49 46C52 48 58 48 61 46" stroke="#223149" strokeWidth="1.5" strokeLinecap="round" />
                 </g>
 
                 {/* Tablet / tech in middle emitting teal light rays */}
                 <g transform="translate(160, 205)">
                   <rect x="0" y="0" width="80" height="15" rx="4" fill="#334155" />
-                  <rect x="4" y="3" width="72" height="9" rx="2" fill="#1E293B" />
-                  <line x1="12" y1="8" x2="35" y2="8" stroke="#2DD4BF" strokeWidth="1.5" strokeLinecap="round" />
-                  <circle cx="68" cy="8" r="1.5" fill="#2DD4BF" />
+                  <rect x="4" y="3" width="72" height="9" rx="2" fill="#223149" />
+                  <line x1="12" y1="8" x2="35" y2="8" stroke="#7FA2DC" strokeWidth="1.5" strokeLinecap="round" />
+                  <circle cx="68" cy="8" r="1.5" fill="#7FA2DC" />
                   {/* Light ray particles */}
-                  <circle cx="20" cy="-25" r="2" fill="#2DD4BF" opacity="0.8" className="animate-pulse" />
-                  <circle cx="60" cy="-35" r="1.5" fill="#818CF8" opacity="0.6" />
-                  <circle cx="40" cy="-15" r="2.5" fill="#2DD4BF" opacity="0.9" />
+                  <circle cx="20" cy="-25" r="2" fill="#7FA2DC" opacity="0.8" className="animate-pulse" />
+                  <circle cx="60" cy="-35" r="1.5" fill="#7FA2DC" opacity="0.6" />
+                  <circle cx="40" cy="-15" r="2.5" fill="#7FA2DC" opacity="0.9" />
                 </g>
 
                 {/* Gradients declarations */}
                 <defs>
                   <radialGradient id="owl-glow" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" stopColor="#818CF8" />
-                    <stop offset="100%" stopColor="#4F46E5" stopOpacity="0" />
+                    <stop offset="0%" stopColor="#7FA2DC" />
+                    <stop offset="100%" stopColor="#2B5BA8" stopOpacity="0" />
                   </radialGradient>
                   <linearGradient id="owl-core" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#4F46E5" />
+                    <stop offset="0%" stopColor="#2B5BA8" />
                     <stop offset="100%" stopColor="#6366F1" />
                   </linearGradient>
                 </defs>

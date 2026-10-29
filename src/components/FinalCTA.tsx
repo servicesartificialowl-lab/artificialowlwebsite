@@ -79,21 +79,21 @@ export default function FinalCTA({ onBookDemo }: FinalCTAProps) {
           <div className="md:col-span-4 space-y-4">
             <a href="#" className="flex items-center gap-3 group">
               <div className="text-white">
-                {/* Official Artificial Owl Logo */}
+                {/* Owl logo, the same symbol as the Teach platform */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+                  strokeWidth="1.9"
+                  strokeLinejoin="miter"
+                  aria-hidden="true"
                   className="w-7 h-7 group-hover:scale-105 transition-transform duration-200"
                 >
-                  <path d="M4 6 L12 14 L20 6 L20 13 L12 21 L4 13 Z" />
-                  <path d="M4 9.5 C4 12, 8 13.5, 10 12" />
-                  <path d="M20 9.5 C20 12, 16 13.5, 14 12" />
-                  <polygon points="11.2,14 12.8,14 12,18.5" fill="currentColor" stroke="none" />
+                  <path d="M2.75 2.5 L2.75 11.5 L12 21 L21.25 11.5 L21.25 2.5" />
+                  <path d="M2.75 2.5 L10.75 10.5 L2.75 10.5" />
+                  <path d="M21.25 2.5 L13.25 10.5 L21.25 10.5" />
+                  <path d="M12 11.4 L12 15" />
                 </svg>
               </div>
               <span className="font-bold text-white text-lg tracking-tight">Artificial Owl</span>

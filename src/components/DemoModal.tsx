@@ -30,7 +30,7 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
             className="relative w-full max-w-[95%] md:max-w-[700px] max-h-[85vh] flex flex-col overflow-hidden rounded-3xl bg-white shadow-2xl ring-1 ring-black/5"
           >
             {/* Upper Decorative Color Bar */}
-            <div className="absolute top-0 left-0 right-0 h-2 bg-[#4F46E5] z-10" />
+            <div className="absolute top-0 left-0 right-0 h-2 bg-[#2B5BA8] z-10" />
 
             {/* Close Button */}
             <button

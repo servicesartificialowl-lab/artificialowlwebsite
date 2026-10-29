@@ -52,7 +52,7 @@ export default function PricingSection({ onBookDemo }: PricingSectionProps) {
             const isSchool = plan.id === 'school';
             const ctaClass = `block w-full py-3.5 px-6 rounded-xl active:scale-[0.98] transition-all font-semibold text-sm text-center cursor-pointer ${
               highlighted
-                ? 'bg-[#4F46E5] hover:bg-[#5a52ff] text-white shadow-[0_4px_14px_rgba(79,70,229,0.3)] hover:shadow-[0_6px_20px_rgba(79,70,229,0.4)]'
+                ? 'bg-[#2B5BA8] hover:bg-[#244C8C] text-white shadow-[0_4px_14px_rgba(43, 91, 168,0.3)] hover:shadow-[0_6px_20px_rgba(43, 91, 168,0.4)]'
                 : 'bg-slate-900 hover:bg-slate-800 text-white shadow-sm'
             }`;
 
@@ -65,19 +65,19 @@ export default function PricingSection({ onBookDemo }: PricingSectionProps) {
                 transition={{ duration: 0.5, delay: 0.1 * (idx + 1) }}
                 className={`rounded-2xl p-8 flex flex-col justify-between relative overflow-hidden ${
                   highlighted
-                    ? 'bg-[#0F172A] text-white border border-[#4F46E5] shadow-xl ring-4 ring-[#4F46E5]/15'
-                    : 'bg-[#F8FAFC] border border-[#D8E2F0] shadow-sm hover:border-[#CBD5E1] transition-all'
+                    ? 'bg-[#14233B] text-white border border-[#2B5BA8] shadow-xl ring-4 ring-[#2B5BA8]/15'
+                    : 'bg-[#f1f2f4] border border-[#D8E2F0] shadow-sm hover:border-[#CBD5E1] transition-all'
                 }`}
               >
                 {highlighted && (
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#4F46E5]/10 rounded-full blur-2xl pointer-events-none" />
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#2B5BA8]/10 rounded-full blur-2xl pointer-events-none" />
                 )}
 
                 <div className="flex-1 flex flex-col">
                   {/* Badge */}
                   <div className="mb-6 h-7">
                     {plan.badge && (
-                      <span className="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wider bg-[#14B8A6]/15 text-[#14B8A6] border border-[#14B8A6]/30">
+                      <span className="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wider bg-butter-300 text-slate-900 border border-butter-500">
                         {plan.badge}
                       </span>
                     )}
@@ -101,7 +101,7 @@ export default function PricingSection({ onBookDemo }: PricingSectionProps) {
                       <div className={`mt-1 text-xs ${highlighted ? 'text-slate-500' : 'text-slate-400'}`}>{plan.vatNote}</div>
                     )}
                     {plan.savings && (
-                      <div className={`mt-1.5 text-xs font-semibold ${highlighted ? 'text-[#14B8A6]' : 'text-[#4F46E5]'}`}>{plan.savings}</div>
+                      <div className={`mt-1.5 text-xs font-semibold ${highlighted ? 'text-[#4A7BC8]' : 'text-[#2B5BA8]'}`}>{plan.savings}</div>
                     )}
                   </div>
 
@@ -111,8 +111,8 @@ export default function PricingSection({ onBookDemo }: PricingSectionProps) {
                       <li key={featureIdx} className="flex items-start gap-3 text-sm">
                         <div className={`mt-0.5 rounded-full p-0.5 border ${
                           highlighted
-                            ? 'bg-[#14B8A6]/15 text-[#14B8A6] border-[#14B8A6]/20'
-                            : 'bg-indigo-50 text-[#4F46E5] border-indigo-100'
+                            ? 'bg-[#4A7BC8]/15 text-[#4A7BC8] border-[#4A7BC8]/20'
+                            : 'bg-indigo-50 text-[#2B5BA8] border-indigo-100'
                         }`}>
                           <Check className="h-3.5 w-3.5" />
                         </div>
