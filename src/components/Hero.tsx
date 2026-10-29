@@ -92,7 +92,7 @@ export default function Hero({ onBookDemo }: HeroProps) {
   };
 
   return (
-    <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 bg-slate-950 overflow-hidden text-white">
+    <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 bg-slate-100 overflow-hidden text-slate-900">
       {/* Dynamic Background Glowing Accents */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full glow-teal opacity-30 -z-10" />
       <div className="absolute -bottom-20 left-1/4 w-[500px] h-[500px] rounded-full glow-teal opacity-20 -z-10" />
@@ -105,11 +105,11 @@ export default function Hero({ onBookDemo }: HeroProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl sm:text-5xl xl:text-6.5xl font-extrabold text-white tracking-tight leading-[1.1] font-sans"
+              className="text-4xl sm:text-5xl xl:text-6.5xl font-extrabold text-slate-900 tracking-tight leading-[1.1] font-sans"
             >
               {t.titlePre}{' '}
-              <span className="text-teal-400 block sm:inline">
-                {t.titleHighlight}
+              <span className="text-teal-500 block sm:inline">
+                <span className="bg-[linear-gradient(transparent_62%,var(--color-butter-300)_62%)] box-decoration-clone">{t.titleHighlight}</span>
               </span>
             </motion.h1>
 
@@ -117,7 +117,7 @@ export default function Hero({ onBookDemo }: HeroProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-xl mx-auto lg:mx-0 font-sans"
+              className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0 font-sans"
             >
               {t.description}
             </motion.p>
@@ -131,7 +131,7 @@ export default function Hero({ onBookDemo }: HeroProps) {
               <button
                 id="hero-cta-demo"
                 onClick={onBookDemo}
-                className="sm:col-span-2 lg:col-span-1 xl:col-span-2 inline-flex items-center justify-center gap-3 px-6 py-4 bg-teal-500 text-white font-bold text-base rounded-2xl shadow-lg shadow-teal-500/20 hover:bg-teal-400 hover:shadow-teal-500/45 hover:-translate-y-0.5 active:translate-y-0 transition-all cursor-pointer border border-teal-400/30 font-sans whitespace-nowrap min-w-fit"
+                className="sm:col-span-2 lg:col-span-1 xl:col-span-2 inline-flex items-center justify-center gap-3 px-6 py-4 bg-teal-500 text-white font-bold text-base rounded-2xl shadow-lg shadow-teal-500/20 hover:bg-teal-600 hover:shadow-teal-500/35 hover:-translate-y-0.5 active:translate-y-0 transition-all cursor-pointer border border-teal-400/30 font-sans whitespace-nowrap min-w-fit"
               >
                 {t.bookDemo}
                 <ArrowRight className="h-5 w-5 shrink-0" />
@@ -139,9 +139,9 @@ export default function Hero({ onBookDemo }: HeroProps) {
               <button
                 id="hero-cta-video"
                 onClick={handleScrollToCarousel}
-                className="flex items-center justify-center gap-2 px-4 py-3.5 bg-white/5 text-slate-200 font-bold text-sm rounded-2xl border border-white/10 hover:border-white/20 hover:bg-white/10 hover:text-white transition-all font-sans cursor-pointer whitespace-nowrap"
+                className="flex items-center justify-center gap-2 px-4 py-3.5 bg-white text-slate-700 font-bold text-sm rounded-2xl border border-slate-300 hover:border-slate-400 hover:text-slate-900 transition-all font-sans cursor-pointer whitespace-nowrap"
               >
-                <Play className="h-4 w-4 text-teal-400 fill-teal-400/20" />
+                <Play className="h-4 w-4 text-teal-500 fill-teal-500/15" />
                 {t.seeHowItWorks}
               </button>
               <a
@@ -149,7 +149,7 @@ export default function Hero({ onBookDemo }: HeroProps) {
                 href="https://teach-app.pt/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-4 py-3.5 bg-teal-500 text-white font-bold text-sm rounded-2xl shadow-lg shadow-teal-500/20 border border-teal-400/30 hover:bg-teal-400 hover:shadow-teal-500/45 transition-all font-sans cursor-pointer whitespace-nowrap"
+                className="flex items-center justify-center gap-2 px-4 py-3.5 bg-slate-900 text-white font-bold text-sm rounded-2xl shadow-lg shadow-slate-900/15 border border-slate-900 hover:bg-slate-800 transition-all font-sans cursor-pointer whitespace-nowrap"
               >
                 {t.goToPlatform}
                 <ExternalLink className="h-4 w-4" />
@@ -163,10 +163,10 @@ export default function Hero({ onBookDemo }: HeroProps) {
               initial={{ opacity: 0, scale: 0.96, y: 30 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ type: 'spring', stiffness: 80, delay: 0.2 }}
-              className="relative rounded-3xl border border-white/10 bg-slate-900/40 backdrop-blur-md shadow-2xl p-3 sm:p-4 text-white max-w-2xl mx-auto lg:max-w-none group"
+              className="relative rounded-3xl border border-slate-800 bg-slate-900 shadow-2xl p-3 sm:p-4 text-white max-w-2xl mx-auto lg:max-w-none group"
             >
               {/* Outer soft glowing halo border */}
-              <div className="absolute inset-0 bg-gradient-to-r from-teal-500/10 via-emerald-500/5 to-teal-400/10 opacity-40 group-hover:opacity-100 transition-opacity duration-700 rounded-3xl -z-10 blur-xl" />
+              <div className="absolute inset-0 bg-gradient-to-r from-teal-500/10 via-teal-500/5 to-teal-400/10 opacity-40 group-hover:opacity-100 transition-opacity duration-700 rounded-3xl -z-10 blur-xl" />
 
               {/* Mac-like browser frame header */}
               <div className="flex items-center justify-between pb-3 border-b border-slate-800/60 px-2 mb-3">
