@@ -4,8 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../lib/translations';
 import {
   ArrowRight,
-  ExternalLink,
-  Play
+  ExternalLink
 } from 'lucide-react';
 
 interface HeroProps {
@@ -85,12 +84,6 @@ export default function Hero({ onBookDemo }: HeroProps) {
     return () => clearInterval(timer);
   }, []);
 
-  const handleScrollToCarousel = () => {
-    if (carouselSectionRef.current) {
-      carouselSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-  };
-
   return (
     <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 bg-slate-950 overflow-hidden text-white">
       {/* Dynamic Background Glowing Accents */}
@@ -126,36 +119,26 @@ export default function Hero({ onBookDemo }: HeroProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="space-y-4"
+              className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4 justify-center lg:justify-start"
             >
-              <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-3 justify-center lg:justify-start">
-                <button
-                  id="hero-cta-demo"
-                  onClick={onBookDemo}
-                  className="inline-flex items-center justify-center gap-3 px-7 py-4 bg-teal-500 text-white font-bold text-base rounded-2xl shadow-lg shadow-teal-500/20 hover:bg-teal-400 hover:shadow-teal-500/45 hover:-translate-y-0.5 active:translate-y-0 transition-all cursor-pointer border border-teal-400/30 font-sans whitespace-nowrap min-w-fit"
-                >
-                  {t.bookDemo}
-                  <ArrowRight className="h-5 w-5 shrink-0" />
-                </button>
-                <a
-                  id="hero-cta-platform"
-                  href="https://teach-app.pt/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-white text-slate-900 font-bold text-base rounded-2xl shadow-lg border border-white hover:bg-slate-100 hover:-translate-y-0.5 active:translate-y-0 transition-all cursor-pointer font-sans whitespace-nowrap min-w-fit"
-                >
-                  {t.goToPlatform}
-                  <ExternalLink className="h-4.5 w-4.5 shrink-0" />
-                </a>
-              </div>
               <button
-                id="hero-cta-video"
-                onClick={handleScrollToCarousel}
-                className="inline-flex items-center gap-2 text-sm font-semibold text-slate-300 hover:text-white transition-colors font-sans cursor-pointer"
+                id="hero-cta-demo"
+                onClick={onBookDemo}
+                className="inline-flex items-center justify-center gap-3 px-6 py-4 bg-teal-500 text-white font-bold text-base rounded-2xl shadow-lg shadow-teal-500/20 hover:bg-teal-400 hover:shadow-teal-500/45 hover:-translate-y-0.5 active:translate-y-0 transition-all cursor-pointer border border-teal-400/30 font-sans whitespace-nowrap min-w-fit"
               >
-                <Play className="h-4 w-4 text-teal-400 fill-teal-400/20" />
-                {t.seeHowItWorks}
+                {t.bookDemo}
+                <ArrowRight className="h-5 w-5 shrink-0" />
               </button>
+              <a
+                id="hero-cta-platform"
+                href="https://teach-app.pt/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 px-6 py-4 bg-white/5 text-slate-200 font-bold text-base rounded-2xl border border-white/10 hover:border-white/20 hover:bg-white/10 hover:text-white transition-all font-sans cursor-pointer whitespace-nowrap min-w-fit"
+              >
+                {t.goToPlatform}
+                <ExternalLink className="h-4.5 w-4.5 text-teal-400" />
+              </a>
             </motion.div>
           </div>
 
