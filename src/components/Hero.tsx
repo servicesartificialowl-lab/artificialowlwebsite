@@ -149,10 +149,10 @@ export default function Hero({ onBookDemo }: HeroProps) {
                 href="https://teach-app.pt/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-4 py-3.5 bg-white text-slate-900 font-bold text-sm rounded-2xl border border-white hover:bg-slate-100 transition-all font-sans cursor-pointer whitespace-nowrap"
+                className="flex items-center justify-center gap-2 px-4 py-3.5 bg-teal-500 text-white font-bold text-sm rounded-2xl shadow-lg shadow-teal-500/20 border border-teal-400/30 hover:bg-teal-400 hover:shadow-teal-500/45 transition-all font-sans cursor-pointer whitespace-nowrap"
               >
                 {t.goToPlatform}
-                <ExternalLink className="h-4 w-4 text-teal-600" />
+                <ExternalLink className="h-4 w-4" />
               </a>
             </motion.div>
           </div>
