@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ProblemSection from './components/ProblemSection';
@@ -21,6 +21,17 @@ import { CookieConsentProvider } from './context/CookieConsentContext';
 
 export default function App() {
   const [isDemoOpen, setIsDemoOpen] = useState(false);
+
+  // Links like artificialowl.ai/#pricing (e.g. from emails): the sections only exist after
+  // React renders, so the browser can't jump to them on its own. Scroll once they're there.
+  useEffect(() => {
+    const id = decodeURIComponent(window.location.hash.slice(1));
+    if (!id) return;
+    const timer = setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'auto', block: 'start' });
+    }, 300);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleOpenDemo = () => {
     setIsDemoOpen(true);
