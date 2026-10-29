@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight, ShieldCheck, ExternalLink } from 'lucide-react';
+import { Menu, X, ArrowRight, ShieldCheck } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../lib/translations';
 
@@ -118,17 +118,6 @@ export default function Navbar({ onBookDemo }: NavbarProps) {
               </button>
             </div>
 
-            {/* "Go to platform" button (opens the Teach app) */}
-            <a
-              href="https://teach-app.pt/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 bg-teal-500 text-white font-semibold text-sm rounded-xl hover:bg-teal-600 transition-all active:scale-[0.98] shadow-sm hover:shadow-md cursor-pointer font-sans whitespace-nowrap inline-flex items-center gap-1.5"
-            >
-              {t.login}
-              <ExternalLink className="h-3.5 w-3.5" />
-            </a>
-
             <button
               onClick={onBookDemo}
               className="px-4.5 py-2 bg-teal-500 text-white font-semibold text-sm rounded-xl hover:bg-teal-600 transition-all active:scale-[0.98] shadow-sm hover:shadow-md font-sans whitespace-nowrap min-w-fit inline-flex items-center justify-center"
@@ -199,16 +188,6 @@ export default function Navbar({ onBookDemo }: NavbarProps) {
               </a>
             ))}
             <div className="pt-4 border-t border-slate-100 space-y-3">
-              <a
-                href="https://teach-app.pt/"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-teal-500 text-white font-semibold text-base hover:bg-teal-600 rounded-xl transition-all shadow-md shadow-teal-100/50 font-sans"
-              >
-                {t.login}
-                <ExternalLink className="h-4 w-4" />
-              </a>
               <button
                 onClick={() => {
                   setIsMobileMenuOpen(false);
