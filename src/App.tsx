@@ -33,7 +33,20 @@ export default function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  // GA4 event for every click on a link to the Teach platform (hero, pricing, ...).
+  // Marked as a key event in GA4 → Admin → Events.
+  useEffect(() => {
+    const handleClick = (event: MouseEvent) => {
+      const link = (event.target as Element | null)?.closest?.('a[href*="teach-app.pt"]');
+      if (link) window.gtag?.('event', 'ir_plataforma');
+    };
+    document.addEventListener('click', handleClick);
+    return () => document.removeEventListener('click', handleClick);
+  }, []);
+
   const handleOpenDemo = () => {
+    // GA4 event (key event): visitor opened the contact form
+    window.gtag?.('event', 'abrir_contacto');
     setIsDemoOpen(true);
   };
 
