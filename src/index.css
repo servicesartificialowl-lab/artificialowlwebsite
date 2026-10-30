@@ -83,11 +83,6 @@
   --color-slate-900: #14233b;
   --color-slate-950: #0d1829;
 
-  /* Butter yellow, used only for highlights (badges, underline). Always with navy text. */
-  --color-butter-100: #fdf6dd;
-  --color-butter-300: #f7e3a1;
-  --color-butter-500: #e6cc78;
-  --color-butter-800: #6b5512;
 }
 
 html,

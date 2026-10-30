@@ -109,7 +109,7 @@ export default function Hero({ onBookDemo }: HeroProps) {
             >
               {t.titlePre}{' '}
               <span className="text-teal-500 block sm:inline">
-                <span className="bg-[linear-gradient(transparent_62%,var(--color-butter-300)_62%)] box-decoration-clone">{t.titleHighlight}</span>
+                <span className="bg-[linear-gradient(transparent_62%,var(--color-brand-100)_62%)] box-decoration-clone">{t.titleHighlight}</span>
               </span>
             </motion.h1>
 

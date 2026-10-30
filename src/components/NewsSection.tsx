@@ -38,7 +38,7 @@ export default function NewsSection() {
               className="relative rounded-3xl p-6 sm:p-8 bg-white border border-teal-500/30 shadow-xl shadow-slate-100 flex flex-col sm:flex-row sm:items-center gap-5"
             >
               <div className="absolute top-0 right-0 p-3">
-                <span className="text-[9px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider bg-butter-300 text-slate-900 border border-butter-500">
+                <span className="text-[9px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider bg-brand-500 text-white border border-brand-500">
                   {item.tag}
                 </span>
               </div>

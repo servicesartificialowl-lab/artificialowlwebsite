@@ -77,7 +77,7 @@ export default function PricingSection({ onBookDemo }: PricingSectionProps) {
                   {/* Badge */}
                   <div className="mb-6 h-7">
                     {plan.badge && (
-                      <span className="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wider bg-butter-300 text-slate-900 border border-butter-500">
+                      <span className="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wider bg-brand-500 text-white border border-brand-500">
                         {plan.badge}
                       </span>
                     )}
